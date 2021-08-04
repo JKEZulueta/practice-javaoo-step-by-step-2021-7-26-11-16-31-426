@@ -21,6 +21,4 @@ public class Teacher extends Person {
     int getKlass(){
         return klass;
     }
-
-
 }
