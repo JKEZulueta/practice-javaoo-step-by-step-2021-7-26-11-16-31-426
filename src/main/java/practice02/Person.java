@@ -22,6 +22,7 @@ public class Person {
 
 
         return String.format("My name is %s. I am %d years old.", name, age);
+        ////MessageFormat.format("My name is {0}. I am {1} years old.", name, age);
 
     }
 
