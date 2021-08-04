@@ -1,8 +1,8 @@
 package practice01;
 
 public class Person {
-    private String name;
-    private int age;
+    private final String name;
+    private final int age;
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
@@ -18,8 +18,8 @@ public class Person {
 
     public String introduce(){
 
-
         return String.format("My name is %s. I am %d years old.", name, age);
+        //MessageFormat.format("My name is {0}. I am {1} years old.", name, age);
 
     }
 }
