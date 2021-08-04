@@ -15,4 +15,12 @@ public class Person {
     public int getAge() {
         return age;
     }
+
+    public String introduce(){
+        String result = ("My name is Tom. I am 21 years old.");
+
+        return result;
+    }
 }
+
+
