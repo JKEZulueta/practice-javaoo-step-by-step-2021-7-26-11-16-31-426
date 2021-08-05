@@ -1,6 +1,7 @@
 package practice09;
 
 
+import java.text.MessageFormat;
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 
@@ -32,10 +33,10 @@ public class Teacher extends Person {
         if(myClasses != null){
             String exiClasses = myClasses.stream()
                     .map(Klass::getNumber)
-                    .map(Object -> toString())
+                    .map(Object::toString)
                     .collect(Collectors.joining(", "));
-            return String.format("%s I am a Teacher. I teach Class %d.",super.introduce(), exiClasses);
-                    //My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.
+            return String.format("%s I am a Teacher. I teach Class %s.",super.introduce(), exiClasses);
+            //My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.
         } else {
             return String.format("%s Iam a Teacher. I teach No Class %s.",super.introduce(), klass);
             //My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.
