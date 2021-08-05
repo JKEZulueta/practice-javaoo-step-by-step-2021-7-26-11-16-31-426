@@ -9,7 +9,7 @@ public class Teacher extends Person {
     private LinkedList<Klass> myClasses;
 
 
-    public Teacher(int id, String name, int age, Klass klass, LinkedList<Klass> myClasses) {
+    public Teacher(int id, String name, int age, LinkedList<Klass> myClasses) {
         super(id, name, age);
         this.myClasses = myClasses;
     }
@@ -34,7 +34,7 @@ public class Teacher extends Person {
                     .map(Klass::getNumber)
                     .map(Object -> toString())
                     .collect(Collectors.joining(", "));
-            return String.format("%s I am a Teacher. I teach Class %d.",super.introduce(), myClasses);
+            return String.format("%s I am a Teacher. I teach Class %d.",super.introduce(), exiClasses);
                     //My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.
         } else {
             return String.format("%s Iam a Teacher. I teach No Class %s.",super.introduce(), klass);
