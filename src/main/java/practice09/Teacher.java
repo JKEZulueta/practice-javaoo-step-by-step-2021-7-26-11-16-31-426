@@ -38,7 +38,7 @@ public class Teacher extends Person {
             return String.format("%s I am a Teacher. I teach Class %s.",super.introduce(), exiClasses);
             //My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.
         } else {
-            return String.format("%s Iam a Teacher. I teach No Class %s.",super.introduce(), klass);
+            return String.format("%s I am a Teacher. I teach No Class.",super.introduce());
             //My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.
         }
     }
