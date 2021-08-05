@@ -29,7 +29,7 @@ public class Person {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) return false; //instanceOf
         Person person = (Person) o;
         return age == person.age && id == person.id && Objects.equals(name, person.name);
     }

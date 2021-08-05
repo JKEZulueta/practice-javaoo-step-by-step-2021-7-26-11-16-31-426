@@ -16,9 +16,9 @@ public class Teacher extends Person {
     }
 
 
-    public void setKlass(Klass klass){
-        this.klass = klass;
-    }
+//    public void setKlass(Klass klass){
+//        this.klass = klass;
+//    }
 
     @Override
     public String introduce(){
