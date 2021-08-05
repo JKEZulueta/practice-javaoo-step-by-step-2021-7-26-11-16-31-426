@@ -16,6 +16,10 @@ public class Klass {
 
     }
 
+    public int doesContain(Student student){
+        return student.getKlass().getNumber();
+    }
+
     public int getNumber() {
         return number;
     }

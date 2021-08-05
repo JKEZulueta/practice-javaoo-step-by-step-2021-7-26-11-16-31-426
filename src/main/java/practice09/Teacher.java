@@ -56,5 +56,10 @@ public class Teacher extends Person {
             //My name is Tom. I am 21 years old. I am a Teacher. I don't teach Jerry.
         }
     }
+
+    public boolean isTeaching(Student student) {
+        return myClasses.stream()
+                .anyMatch(klass -> klass.getNumber() == klass.doesContain(student));
+    }
 }
 
