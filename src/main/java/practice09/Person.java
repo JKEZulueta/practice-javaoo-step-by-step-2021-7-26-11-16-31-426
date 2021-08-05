@@ -1,5 +1,6 @@
 package practice09;
 
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class Person {

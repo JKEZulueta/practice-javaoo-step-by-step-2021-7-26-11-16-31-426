@@ -1,13 +1,17 @@
 package practice09;
 
 
+import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public class Teacher extends Person {
     private Klass klass;
+    private LinkedList<Klass> myClasses;
 
-    public Teacher(int id, String name, int age, Klass klass) {
+
+    public Teacher(int id, String name, int age, Klass klass, LinkedList<Klass> myClasses) {
         super(id, name, age);
-        this.klass = klass;
+        this.myClasses = myClasses;
     }
 
     public Teacher(int id, String name, int age){
@@ -15,18 +19,27 @@ public class Teacher extends Person {
     }
 
 
+    public LinkedList<Klass> getClasses(){
+        return  myClasses;
+    }
+
     public void setKlass(Klass klass){
         this.klass = klass;
     }
 
     @Override
     public String introduce(){
-        if(klass != null) {
-            return super.introduce() + " I am a Teacher. I teach " + klass.getDisplayName() + ".";
-        }else{
-            return super.introduce() + " I am a Teacher. I teach No Class.";
+        if(myClasses != null){
+            String exiClasses = myClasses.stream()
+                    .map(Klass::getNumber)
+                    .map(Object -> toString())
+                    .collect(Collectors.joining(", "));
+            return String.format("%s I am a Teacher. I teach Class %d.",super.introduce(), myClasses);
+                    //My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2, 3.
+        } else {
+            return String.format("%s Iam a Teacher. I teach No Class %s.",super.introduce(), klass);
+            //My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.
         }
-
     }
 
     public Klass getKlass() {
